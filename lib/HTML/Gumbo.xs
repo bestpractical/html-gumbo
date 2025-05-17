@@ -38,7 +38,7 @@ typedef enum {
 STATIC
 void
 walk_tree(pTHX_ GumboNode* node, int flags, void (*cb)(pTHX_ PerlHtmlGumboType, GumboNode*, void*), void* ctx ) {
-    if ( node->type == GUMBO_NODE_DOCUMENT || node->type == GUMBO_NODE_ELEMENT ) {
+    if ( node->type == GUMBO_NODE_DOCUMENT || node->type == GUMBO_NODE_ELEMENT || node->type == GUMBO_NODE_TEMPLATE) {
         GumboVector* children;
         int skip = flags&PHG_FLAG_SKIP_ROOT_ELEMENT && node->type == GUMBO_NODE_ELEMENT && node->parent && node->parent->type == GUMBO_NODE_DOCUMENT;
         if ( !skip ) {
