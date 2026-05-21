@@ -386,6 +386,7 @@ tree_to_tree(pTHX_ PerlHtmlGumboType type, GumboNode* node, void* ctx) {
     else if ( type == PHG_ELEMENT_START ) {
         SV* element = new_html_element(aTHX_ node);
         push_element(aTHX_ *out, element);
+        SvREFCNT_dec(*out);
         *out = element;
     }
     else if ( type == PHG_ELEMENT_END ) {
@@ -510,10 +511,13 @@ STATIC
 SV*
 parse_to_tree_cb(pTHX_ GumboNode* document, int flags, void* not_used ) {
     SV* res;
+    SV* current;
     GumboNode fake;
     fake.type = GUMBO_NODE_DOCUMENT;
     res = new_html_element(aTHX_ &fake);
-    walk_tree(aTHX_ document, flags, tree_to_tree, (void*)(&res));
+    current = SvREFCNT_inc(res);
+    walk_tree(aTHX_ document, flags, tree_to_tree, (void*)(&current));
+    SvREFCNT_dec(current);
     return res;
 }
 
