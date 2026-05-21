@@ -132,7 +132,7 @@ L</parse> method and it will be called for every node in the document:
         elsif ( $event eq 'end' ) {
             my ($tag) = @_;
         }
-        elsif ( $event eq /^(text|space|cdata|comment)$/ ) {
+        elsif ( $event =~ /^(text|space|cdata|comment)$/ ) {
             my ($text) = @_;
         }
         else {
