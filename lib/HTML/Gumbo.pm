@@ -303,6 +303,14 @@ sub parse_to_callback {
 
 Ruslan Zakirov E<lt>ruz@bestpractical.comE<gt>
 
+Best Practical Solutions, LLC E<lt>modules@bestpractical.comE<gt>
+
+=head1 BUGS
+
+All bugs should be reported via email to: L<bug-HTML-Gumbo@rt.cpan.org|mailto:bug-HTML-Gumbo@rt.cpan.org>
+
+Or via the web at: L<rt.cpan.org|http://rt.cpan.org/Public/Dist/Display.html?Name=HTML-Gumbo>.
+
 =head1 LICENSE
 
 Under the same terms as perl itself.
