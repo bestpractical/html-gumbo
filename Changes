@@ -6,7 +6,7 @@ Revision history for Perl module HTML::Gumbo
     - Fix memory leak in tree mode (rt.cpan.org #128667)
     - Add test for tree mode memory leak (rt.cpan.org #128667) (thanks to Nick Kostyria)
     - Fix callback example (rt.cpan.org #122716) (thanks to gregor herrmann)
-    - Fix wrong code path with GUMBO_NODE_TEMPLATE (thanks to Niko Tyni)
+    - Fix wrong code path with GUMBO_NODE_TEMPLATE (thanks to Niko Tyni) (CVE-2025-15646)
     - Add tests for GUMBO_NODE_TEMPLATE handling
 
 0.18 2018-06-23
