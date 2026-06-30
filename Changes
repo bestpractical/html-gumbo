@@ -1,5 +1,9 @@
 Revision history for Perl module HTML::Gumbo
 
+0.20 2026-06-30
+    - Switch to bps repo
+    - Update changelog for the CVE-2025-15646 vulnerability fix
+
 0.19 2026-05-21
     - remove Alien::LibGumbo as a runtime dependency (thanks to Graham Ollis)
     - tree_to_callback: don't check document nodes for void elements (thanks to Niko Tyni)
